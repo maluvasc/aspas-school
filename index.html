@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança e Privacidade - ASPAS School</title>
+    <!-- Carrega o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter como padrão */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para garantir transição suave do carrossel */
+        #carousel-track {
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Wrapper principal -->
+    <div class="min-h-screen flex flex-col">
+
+        <!-- CABEÇALHO -->
+        <header class="bg-white shadow-sm">
+            <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                <!-- Logo -->
+                <div class="font-bold text-xl text-red-800">
+                    ASPAS <span class="font-normal">School</span>
+                </div>
+                
+                <!-- Links de Navegação (Desktop) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-red-800">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-red-800">Nossa Filosofia</a>
+                    <a href="#" class="text-gray-600 hover:text-red-800">Matrículas</a>
+                    <a href="#" class="text-gray-600 hover:text-red-800">Contato</a>
+                </div>
+
+                <!-- Botão de Menu (Mobile) -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <!-- Menu Mobile (Oculto por padrão) -->
+            <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+                <a href="#" class="block text-gray-600 hover:text-red-800">Home</a>
+                <a href="#" class="block text-gray-600 hover:text-red-800">Nossa Filosofia</a>
+                <a href="#" class="block text-gray-600 hover:text-red-800">Matrículas</a>
+                <a href="#" class="block text-gray-600 hover:text-red-800">Contato</a>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="flex-grow">
+            
+            <!-- Seção de Título -->
+            <section class="py-16 px-6 bg-white"> <!-- Removido 'text-center' -->
+                <div class="max-w-6xl mx-auto"> <!-- Adicionado wrapper para alinhar com o resto -->
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Segurança e Privacidade</h1>
+                    <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl">Confira o resumo de avaliação de riscos e como eles são tratados</p> <!-- Removido 'mx-auto' -->
+                </div>
+            </section>
+
+            <!-- Seção do Relatório -->
+            <section class="py-12 px-6">
+                <div class="max-w-6xl mx-auto"> <!-- Adicionado wrapper para alinhar com o resto -->
+                    <!-- Trocado 'div' por 'a' para ser clicável -->
+                    <a href="#" class="block bg-red-700 text-white p-6 rounded-lg max-w-3xl text-center shadow-lg hover:bg-red-800 transition-colors duration-300"> <!-- Removido mx-auto, mudado max-w-4xl para max-w-3xl -->
+                        <h2 class="text-xl font-bold">Baixe o Relatório Completo de Avaliação de Riscos e Impactos (RIPD)</h2>
+                        <p class="mt-1 text-sm text-red-100">(Versão 1.2 – Autor: Equipe de Segurança Digital ASPAS School – Atualizado em: 10/2025)</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Seção do Carrossel -->
+            <section class="py-16 px-6">
+                <div class="max-w-6xl mx-auto relative">
+                    
+                    <!-- Container do Carrossel -->
+                    <div class="overflow-hidden rounded-lg">
+                        <div id="carousel-track" class="flex">
+                            
+                            <!-- Card NOVO -->
+                            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 box-border p-4">
+                                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-md flex flex-col h-full">
+                                    <!-- Seção do Título com altura mínima para alinhamento -->
+                                    <div class="flex-shrink-0 min-h-[100px]">
+                                        <h3 class="text-2xl font-bold text-gray-800">Quais dados dos alunos temos acesso?</h3>
+                                        <!-- Espaço reservado para alinhar com outros cards -->
+                                        <div class="flex items-center mt-3 h-6">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="mt-6 flex-grow space-y-4">
+                                        <p><strong class="text-gray-700">Identificação:</strong> nome, idade, turma, número de matrícula.</p>
+                                        <p><strong class="text-gray-700">Contato:</strong> e-mail e login da escola.</p>
+                                        <p><strong class="text-gray-700">Desempenho escolar:</strong> notas, frequência, relatórios de atividades, progresso em jogos educativos.</p>
+                                        <p><strong class="text-gray-700">Interações em plataformas educativas utilizadas:</strong> mensagens enviadas à IA educativa, respostas em quizzes e tempo de uso.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 1.1 -->
+                            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 box-border p-4">
+                                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-md flex flex-col h-full">
+                                    <!-- Seção do Título com altura mínima para alinhamento -->
+                                    <div class="flex-shrink-0 min-h-[100px]">
+                                        <h3 class="text-2xl font-bold text-gray-800">Avaliação de Riscos à Privacidade</h3>
+                                        <div class="flex items-center mt-3">
+                                            <span class="w-4 h-4 rounded-full bg-yellow-400 inline-block"></span>
+                                            <span class="ml-2 font-semibold text-gray-700">Baixo à Médio Risco</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-6 flex-grow space-y-4">
+                                        <p><strong class="text-gray-700">IA Generativa:</strong> O uso pode envolver o tratamento de textos ou imagens criados pelos alunos. Há risco de identificação indireta e exposição de dados pessoais.</p>
+                                        <p><strong class="text-gray-700">Plataformas de Aprendizagem e Jogos Educativos:</strong> Risco de vazamento ou uso indevido dos registros de histórico de desempenho e tempo de acesso dos estudantes caso a proteção de dados seja insuficiente. Risco baixo, mas existente, de rastreamento indevido por terceiros.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 1.2 -->
+                            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 box-border p-4">
+                                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-md flex flex-col h-full">
+                                    <!-- Seção do Título com altura mínima para alinhamento -->
+                                    <div class="flex-shrink-0 min-h-[100px]">
+                                        <h3 class="text-2xl font-bold text-gray-800">Avaliação de Riscos a Vieses</h3>
+                                        <div class="flex items-center mt-3">
+                                            <span class="w-4 h-4 rounded-full bg-yellow-400 inline-block"></span>
+                                            <span class="ml-2 font-semibold text-gray-700">Médio Risco</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-6 flex-grow space-y-4">
+                                        <p><strong class="text-gray-700">IA Generativa:</strong> Os modelos podem refletir preconceitos ou estereótipos presentes nos dados originais, afetando as respostas geradas.</p>
+                                        <p><strong class="text-gray-700">Plataformas de Aprendizagem e Jogos Educativos:</strong> Algoritmos que recomendam conteúdos podem privilegiar certos perfis de aluno ou estilos de aprendizagem. Certos jogos podem reforçar padrões de gênero ou culturais sem intenção.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2.1 -->
+                            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 box-border p-4">
+                                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-md flex flex-col h-full">
+                                    <!-- Seção do Título com altura mínima para alinhamento -->
+                                    <div class="flex-shrink-0 min-h-[100px]">
+                                        <h3 class="text-2xl font-bold text-gray-800">Avaliação de Riscos à Segurança</h3>
+                                        <div class="flex items-center mt-3">
+                                            <span class="w-4 h-4 rounded-full bg-green-500 inline-block"></span>
+                                            <span class="ml-2 font-semibold text-gray-700">Baixo Risco</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-6 flex-grow space-y-4">
+                                        <p><strong class="text-gray-700">IA Generativa:</strong> O ambiente é controlado, mas exige monitoramento para evitar que alunos compartilhem dados sensíveis.</p>
+                                        <p><strong class="text-gray-700">Plataformas de Aprendizagem:</strong> Podem sofrer tentativas de acesso indevido. Uso de senhas fortes e autenticação em dois fatores minimiza esse risco.</p>
+                                        <p><strong class="text-gray-700">Aplicativos de Jogos Educativos:</strong> Instalados apenas de fontes verificadas e com supervisão.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2.2 -->
+                            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 box-border p-4">
+                                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-md flex flex-col h-full">
+                                    <!-- Seção do Título com altura mínima para alinhamento -->
+                                    <div class="flex-shrink-0 min-h-[100px]">
+                                        <h3 class="text-2xl font-bold text-gray-800">Como mitigamos esses riscos?</h3>
+                                        <!-- Espaço reservado para alinhar com outros cards -->
+                                        <div class="flex items-center mt-3 h-6">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="mt-6 flex-grow">
+                                        <ul class="space-y-3 list-disc list-inside text-gray-700">
+                                            <li>Não compartilhamos dados pessoais dos alunos, o acesso é restrito à equipe pedagógica.</li>
+                                            <li>Professores e alunos são orientados sobre o uso seguro e ético das ferramentas.</li>
+                                            <li>Revisões mensais para reavaliar impactos disponibilizados no site da <strong>ASPAS School</strong>.</li>
+                                            <li>Nenhum aplicativo é usado sem passar por revisão de segurança e pedagogia.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Botões de Controle -->
+                    <button id="prev-button" class="absolute top-1/2 -translate-y-1/2 left-0 md:-left-12 p-2 bg-white rounded-full shadow-md text-gray-700 hover:bg-gray-100 transition-opacity duration-300 disabled:opacity-50" disabled>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-button" class="absolute top-1/2 -translate-y-1/2 right-0 md:-right-12 p-2 bg-white rounded-full shadow-md text-gray-700 hover:bg-gray-100 transition-opacity duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer class="bg-red-800 text-white mt-16">
+            <div class="max-w-6xl mx-auto px-6 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                    <!-- Logo Rodapé -->
+                    <div>
+                        <div class="font-bold text-xl text-white">
+                            ASPAS <span class="font-normal">School</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Links Rodapé -->
+                    <div class="flex flex-col space-y-2">
+                        <a href="#" class="hover:underline">Política de Privacidade</a>
+                        <a href="#" class="hover:underline">Segurança e Privacidade</a>
+                        <a href="#" class="hover:underline">Trabalhe Conosco</a>
+                        <a href="#" class="hover:underline">Calendário</a>
+                    </div>
+
+                    <!-- Redes Sociais -->
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <!-- YouTube -->
+                        <a href="#" title="YouTube">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.582 7.187c-.23-.84-.89-1.5-1.73-1.73C18.26 5 12 5 12 5s-6.26 0-7.852.457c-.84.23-1.5.89-1.73 1.73C2 8.78 2 12 2 12s0 3.22.418 4.813c.23.84.89 1.5 1.73 1.73C5.74 19 12 19 12 19s6.26 0 7.852-.457c.84-.23 1.5-.89 1.73-1.73C22 15.22 22 12 22 12s0-3.22-.418-4.813zM9.75 15.11V8.89l5.25 3.11-5.25 3.11z"></path></svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#" title="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.99 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.99 22 12z"></path></svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" title="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.053 1.905.24 2.49.446.7.27 1.255.64 1.8 1.188.54.545.918 1.1.187 1.8.207.585.394 1.32.446 2.49.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.17-.24 1.905-.446 2.49a4.89 4.89 0 0 1-1.188 1.8c-.545.54-1.1.918-1.8.187-.585.207-1.32.394-2.49.446-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.053-1.905-.24-2.49-.446a4.89 4.89 0 0 1-1.8-1.188c-.54-.545-.918-1.1-.187-1.8-.207-.585-.394-1.32-.446-2.49-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.17.24-1.905.446-2.49.27-.7.64-1.255 1.188-1.8.545-.54 1.1-.918 1.8-.187.585-.207 1.32-.394 2.49-.446C8.416 2.175 8.796 2.163 12 2.163zm0 1.802c-3.14 0-3.483.01-4.7.07-1.096.05-1.72.23-2.22.42-.58.21-.96.48-1.38.9-.42.42-.69.8-.9 1.38-.19.5-.37 1.12-.42 2.22-.06 1.21-.07 1.56-.07 4.7s.01 3.48.07 4.7c.05 1.09.23 1.72.42 2.22.21.58.48.96.9 1.38.42.42.8.69 1.38.9.5.19 1.12.37 2.22.42 1.21.06 1.56.07 4.7.07s3.48-.01 4.7-.07c1.09-.05 1.72-.23 2.22-.42.58-.21.96-.48 1.38-.9.42-.42.69-.8.9-1.38.19-.5.37-1.12.42-2.22.06-1.21.07-1.56.07-4.7s-.01-3.48-.07-4.7c-.05-1.09-.23-1.72-.42-2.22-.21-.58-.48-.96-.9-1.38-.42-.42-.8-.69-1.38-.9-.5-.19-1.12-.37-2.22-.42-1.21-.06-1.56-.07-4.7-.07zm0 2.882c-1.932 0-3.5 1.568-3.5 3.5s1.568 3.5 3.5 3.5 3.5-1.568 3.5-3.5-1.568-3.5-3.5-3.5zm0 5.202c-1.05 0-1.9- .85-1.9-1.9s.85-1.9 1.9-1.9 1.9.85 1.9 1.9-.85 1.9-1.9 1.9zm4.332-5.702c-.595 0-1.075-.48-1.075-1.075s.48-1.075 1.075-1.075 1.075.48 1.075 1.075-.48 1.075-1.075 1.075z"></path></svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#" title="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="border-t border-red-700 mt-8 pt-6 text-center text-sm text-red-100">
+                    ASPAS School © 2025. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // --- Lógica do Menu Mobile ---
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Lógica do Carrossel ---
+            const track = document.getElementById('carousel-track');
+            const prevButton = document.getElementById('prev-button');
+            const nextButton = document.getElementById('next-button');
+            
+            // Obtenha o número de slides dinamicamente
+            const slides = Array.from(track.children);
+            const slideCount = slides.length;
+            let currentIndex = 0;
+
+            // Função para saber quantos slides estão visíveis
+            function getSlidesVisible() {
+                if (window.innerWidth >= 1024) { // lg (>= 1024px)
+                    return 3;
+                }
+                if (window.innerWidth >= 768) { // md (>= 768px)
+                    return 2;
+                }
+                return 1; // mobile
+            }
+
+            // Função para saber quantos slides pular
+            function getSlidesToScroll() {
+                // Vamos pular 1 de cada vez para um efeito de "scrolling"
+                return 1;
+            }
+
+
+            function updateCarousel() {
+                const slidesVisible = getSlidesVisible();
+                
+                // Quantidade de "passos" possíveis
+                // Se temos 8 slides e vemos 3, temos (8 - 3) = 5 passos + o inicial.
+                // Índices possíveis: 0, 1, 2, 3, 4, 5.
+                const maxIndex = slideCount - slidesVisible;
+
+                // Garante que o currentIndex não passe do limite
+                if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
+                if (currentIndex < 0) {
+                    currentIndex = 0;
+                }
+                
+                // Calcula o deslocamento
+                let movePercentage = 0;
+                if (slidesVisible === 1) {
+                    movePercentage = currentIndex * 100; // 100% por slide
+                } else if (slidesVisible === 2) {
+                    movePercentage = currentIndex * 50; // 50% por slide
+                } else if (slidesVisible === 3) {
+                    movePercentage = currentIndex * (100 / 3); // 33.333...% por slide
+                }
+
+                track.style.transform = `translateX(-${movePercentage}%)`;
+
+                // Habilitar/desabilitar botões
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex >= maxIndex;
+
+                // Adiciona/remove classes para feedback visual
+                prevButton.classList.toggle('opacity-50', currentIndex === 0);
+                prevButton.classList.toggle('cursor-not-allowed', currentIndex === 0);
+                nextButton.classList.toggle('opacity-50', currentIndex >= maxIndex);
+                nextButton.classList.toggle('cursor-not-allowed', currentIndex >= maxIndex);
+            }
+
+            nextButton.addEventListener('click', function () {
+                const slidesVisible = getSlidesVisible();
+                const slidesToScroll = getSlidesToScroll();
+                const maxIndex = slideCount - slidesVisible;
+
+                currentIndex += slidesToScroll;
+                if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
+                updateCarousel();
+            });
+
+            prevButton.addEventListener('click', function () {
+                const slidesToScroll = getSlidesToScroll();
+                
+                currentIndex -= slidesToScroll;
+                if (currentIndex < 0) {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            });
+
+            // Atualiza no redimensionamento da tela
+            window.addEventListener('resize', updateCarousel);
+
+            // Inicializa o carrossel na posição correta
+            updateCarousel();
+        });
+    </script>
+
+</body>
+</html>
